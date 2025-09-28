@@ -4,7 +4,7 @@ import PageContainer from 'src/components/container/PageContainer.jsx';
 import HeaderAlert from 'src/components/frontend-pages/shared/header/HeaderAlert.jsx';
 import HpHeader from 'src/components/frontend-pages/shared/header/HpHeader.jsx';
 import Footer from 'src/components/landingpage/footer/Footer.jsx';
-import ScrollToTop from 'src/components/shared/ScrollToTop.jsx';
+import ScrollToTop from 'src/components/shared/ScrollToTop.js';
 import { BlogProvider } from 'src/context/BlogContext/index';
 import {
   Container,
