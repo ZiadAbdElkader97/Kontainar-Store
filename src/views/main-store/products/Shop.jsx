@@ -54,7 +54,7 @@ import {
   getBrands,
   getColors,
   getSizes,
-} from '../../../services/productsService';
+} from '../../../api/products/productsService';
 
 const Shop = () => {
   const [products, setProducts] = useState([]);

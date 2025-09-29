@@ -49,7 +49,7 @@ import {
   getProductsStats,
   getCategories,
   getBrands,
-} from '../../../services/productsService';
+} from '../../../api/products/productsService';
 
 const ListProducts = () => {
   const navigate = useNavigate();

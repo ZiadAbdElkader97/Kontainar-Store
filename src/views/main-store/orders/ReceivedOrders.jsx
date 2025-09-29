@@ -75,7 +75,7 @@ const getPaymentStatusColor = (paymentStatus) => {
   }
 };
 import PageContainer from 'src/components/container/PageContainer';
-import { getReceivedOrders, completeOrder, getOrdersStats } from '../../../services/ordersService';
+import { getReceivedOrders, completeOrder, getOrdersStats } from '../../../api/orders/ordersService';
 
 const getStatusColor = (status) => {
   switch (status) {

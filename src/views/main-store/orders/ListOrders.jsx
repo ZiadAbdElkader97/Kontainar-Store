@@ -61,7 +61,7 @@ import {
   cancelOrder,
   completeOrder,
   getOrdersStats,
-} from '../../../services/ordersService';
+} from '../../../api/orders/ordersService';
 
 const getStatusColor = (status) => {
   switch (status) {

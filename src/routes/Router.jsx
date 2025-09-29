@@ -11,13 +11,170 @@ const BlankLayout = Loadable(lazy(() => import('../layouts/blank/BlankLayout.jsx
 const ModernDash = Loadable(lazy(() => import('../views/dashboard/Dashboard.jsx')));
 const EcommerceDash = Loadable(lazy(() => import('../views/dashboard/Ecommerce.jsx')));
 
+// front end pages
+const Homepage = Loadable(lazy(() => import('../views/pages/frontend-pages/Homepage.jsx')));
+const About = Loadable(lazy(() => import('../views/pages/frontend-pages/About.jsx')));
+const Contact = Loadable(lazy(() => import('../views/pages/frontend-pages/Contact.jsx')));
+const Portfolio = Loadable(lazy(() => import('../views/pages/frontend-pages/Portfolio.jsx')));
+const PagePricing = Loadable(lazy(() => import('../views/pages/frontend-pages/Pricing.jsx')));
+// Blogs pages
+const BlogsCreate = Loadable(
+  lazy(() => import('../views/pages/frontend-pages/blogs/BlogsCreate.jsx')),
+);
+const BlogsList = Loadable(lazy(() => import('../views/pages/frontend-pages/blogs/BlogsList.jsx')));
+const BlogsDeleted = Loadable(
+  lazy(() => import('../views/pages/frontend-pages/blogs/BlogsDeleted.jsx')),
+);
+
+const BecomeSeller = Loadable(lazy(() => import('../views/pages/frontend-pages/BecomeSeller.jsx')));
+const UpcomingOffers = Loadable(
+  lazy(() => import('../views/pages/frontend-pages/UpcomingOffers.jsx')),
+);
+// Policies pages
+const PrivacyPolicy = Loadable(
+  lazy(() => import('../views/pages/frontend-pages/policies/PrivacyPolicy.jsx')),
+);
+const ReturnPolicy = Loadable(
+  lazy(() => import('../views/pages/frontend-pages/policies/ReturnPolicy.jsx')),
+);
+const RefundPolicy = Loadable(
+  lazy(() => import('../views/pages/frontend-pages/policies/RefundPolicy.jsx')),
+);
+
+// Orders pages
+const PendingOrders = Loadable(lazy(() => import('../views/main-store/orders/PendingOrders.jsx')));
+const ReceivedOrders = Loadable(
+  lazy(() => import('../views/main-store/orders/ReceivedOrders.jsx')),
+);
+const ListOrders = Loadable(lazy(() => import('../views/main-store/orders/ListOrders.jsx')));
+
+// Products pages
+const AddProduct = Loadable(lazy(() => import('../views/main-store/products/AddProduct.jsx')));
+const ListProducts = Loadable(lazy(() => import('../views/main-store/products/ListProducts.jsx')));
+const DeletedProducts = Loadable(
+  lazy(() => import('../views/main-store/products/DeletedProducts.jsx')),
+);
+const EditProduct = Loadable(lazy(() => import('../views/main-store/products/EditProduct.jsx')));
+const Shop = Loadable(lazy(() => import('../views/main-store/products/Shop.jsx')));
+
+// Categories pages
+const AddCategory = Loadable(lazy(() => import('../views/main-store/categories/AddCategory.jsx')));
+const ListCategories = Loadable(
+  lazy(() => import('../views/main-store/categories/ListCategories.jsx')),
+);
+const EditCategory = Loadable(
+  lazy(() => import('../views/main-store/categories/EditCategory.jsx')),
+);
+
+// Tags pages
+const AddTag = Loadable(lazy(() => import('../views/main-store/tags/AddTag.jsx')));
+const ListTags = Loadable(lazy(() => import('../views/main-store/tags/ListTags.jsx')));
+const EditTag = Loadable(lazy(() => import('../views/main-store/tags/EditTag.jsx')));
+
+// Warehouse pages
+const ListPurchases = Loadable(
+  lazy(() => import('../views/main-store/warehouse/purchases/ListPurchases.jsx')),
+);
+const ListInventory = Loadable(
+  lazy(() => import('../views/main-store/warehouse/inventory/ListInventory.jsx')),
+);
+const AddPurchase = Loadable(
+  lazy(() => import('../views/main-store/warehouse/purchases/AddPurchase.jsx')),
+);
+const AddInventory = Loadable(
+  lazy(() => import('../views/main-store/warehouse/inventory/AddInventory.jsx')),
+);
+
+// Attributes pages
+const AddAttribute = Loadable(
+  lazy(() => import('../views/main-store/attributes/AddAttribute.jsx')),
+);
+const ListAttributes = Loadable(
+  lazy(() => import('../views/main-store/attributes/ListAttributes.jsx')),
+);
+const EditAttribute = Loadable(
+  lazy(() => import('../views/main-store/attributes/EditAttribute.jsx')),
+);
+
+// Invoices pages
+const AddInvoice = Loadable(lazy(() => import('../views/main-store/invoices/AddInvoice.jsx')));
+const ListInvoices = Loadable(lazy(() => import('../views/main-store/invoices/ListInvoices.jsx')));
+const EditInvoice = Loadable(lazy(() => import('../views/main-store/invoices/EditInvoice.jsx')));
+const DeletedInvoices = Loadable(
+  lazy(() => import('../views/main-store/invoices/DeletedInvoices.jsx')),
+);
+
+// Brands pages
+const AddBrand = Loadable(lazy(() => import('../views/main-store/brands/AddBrand.jsx')));
+const ListBrands = Loadable(lazy(() => import('../views/main-store/brands/ListBrands.jsx')));
+const EditBrand = Loadable(lazy(() => import('../views/main-store/brands/EditBrand.jsx')));
+
+// Coupons pages
+const AddCoupon = Loadable(lazy(() => import('../views/main-store/coupons/AddCoupon.jsx')));
+const ListCoupons = Loadable(lazy(() => import('../views/main-store/coupons/ListCoupons.jsx')));
+const EditCoupon = Loadable(lazy(() => import('../views/main-store/coupons/EditCoupon.jsx')));
+
+// Reviews page
+const Reviews = Loadable(lazy(() => import('../views/main-store/reviews/Reviews.jsx')));
+
+// Settings page
+const Settings = Loadable(lazy(() => import('../views/main-store/settings/Settings.jsx')));
+
+// User Management pages
+const CreateNewUser = Loadable(
+  lazy(() => import('../views/user-management/all-users/CreateNewUser.jsx')),
+);
+const ListUsers = Loadable(lazy(() => import('../views/user-management/all-users/ListUsers.jsx')));
+const EditUser = Loadable(lazy(() => import('../views/user-management/all-users/EditUser.jsx')));
+const DeletedUsers = Loadable(
+  lazy(() => import('../views/user-management/all-users/DeletedUsers.jsx')),
+);
+const AdminAccountSetting = Loadable(
+  lazy(() => import('../views/user-management/all-users/AdminAccountSetting.jsx')),
+);
+
+// Roles pages
+const AddNewRole = Loadable(lazy(() => import('../views/user-management/roles/AddNewRole.jsx')));
+const EditRole = Loadable(lazy(() => import('../views/user-management/roles/EditRole.jsx')));
+const ListRoles = Loadable(lazy(() => import('../views/user-management/roles/ListRoles.jsx')));
+
+// Permissions pages
+const AddNewPermission = Loadable(
+  lazy(() => import('../views/user-management/permissions/AddNewPermission.jsx')),
+);
+const EditPermission = Loadable(
+  lazy(() => import('../views/user-management/permissions/EditPermission.jsx')),
+);
+const ListPermissions = Loadable(
+  lazy(() => import('../views/user-management/permissions/ListPermissions.jsx')),
+);
+
+// Customers pages
+const AddNewCustomer = Loadable(
+  lazy(() => import('../views/user-management/customers/AddNewCustomer.jsx')),
+);
+const EditCustomer = Loadable(
+  lazy(() => import('../views/user-management/customers/EditCustomer.jsx')),
+);
+const ListCustomers = Loadable(
+  lazy(() => import('../views/user-management/customers/ListCustomers.jsx')),
+);
+
+// Staff pages
+const AddNewStaff = Loadable(lazy(() => import('../views/user-management/staff/AddNewStaff.jsx')));
+const EditStaff = Loadable(lazy(() => import('../views/user-management/staff/EditStaff.jsx')));
+const ListStaff = Loadable(lazy(() => import('../views/user-management/staff/ListStaff.jsx')));
+
+// Sellers pages
+const AddNewSeller = Loadable(lazy(() => import('../views/user-management/sellers/AddNewSeller.jsx')));
+const EditSeller = Loadable(lazy(() => import('../views/user-management/sellers/EditSeller.jsx')));
+const ListSellers = Loadable(lazy(() => import('../views/user-management/sellers/ListSellers.jsx')));
+
 /* ****Apps***** */
 const Chats = Loadable(lazy(() => import('../views/apps/chat/Chat.jsx')));
 const Notes = Loadable(lazy(() => import('../views/apps/notes/Notes.jsx')));
 const Calendar = Loadable(lazy(() => import('../views/apps/calendar/BigCalendar.jsx')));
 const Email = Loadable(lazy(() => import('../views/apps/email/Email.jsx')));
-// const Blog = Loadable(lazy(() => import('../views/apps/blog/Blog.jsx')));
-// const BlogDetail = Loadable(lazy(() => import('../views/apps/blog/BlogPost.jsx')));
 const Tickets = Loadable(lazy(() => import('../views/apps/tickets/Tickets.jsx')));
 const Contacts = Loadable(lazy(() => import('../views/apps/contacts/Contacts.jsx')));
 const Ecommerce = Loadable(lazy(() => import('../views/apps/eCommerce/Ecommerce.jsx')));
@@ -36,10 +193,6 @@ const UserProfile = Loadable(lazy(() => import('../views/apps/user-profile/UserP
 const Followers = Loadable(lazy(() => import('../views/apps/user-profile/Followers.jsx')));
 const Friends = Loadable(lazy(() => import('../views/apps/user-profile/Friends.jsx')));
 const Gallery = Loadable(lazy(() => import('../views/apps/user-profile/Gallery.jsx')));
-const Invoices = Loadable(lazy(() => import('../views/main-store/invoices/Invoices.jsx')));
-const InvoiceCreate = Loadable(lazy(() => import('../views/main-store/invoices/Create.jsx')));
-const InvoiceDetail = Loadable(lazy(() => import('../views/main-store/invoices/Detail.jsx')));
-const InvoiceEdit = Loadable(lazy(() => import('../views/main-store/invoices/Edit.jsx')));
 const Kanban = Loadable(lazy(() => import('../views/apps/kanban/Kanban.jsx')));
 
 // Pages
@@ -148,57 +301,6 @@ const Maintenance = Loadable(lazy(() => import('../views/authentication/Maintena
 // landingpage
 const Landingpage = Loadable(lazy(() => import('../views/pages/landingpage/Landingpage.jsx')));
 
-// front end pages
-const Homepage = Loadable(lazy(() => import('../views/pages/frontend-pages/Homepage.jsx')));
-const About = Loadable(lazy(() => import('../views/pages/frontend-pages/About.jsx')));
-const Contact = Loadable(lazy(() => import('../views/pages/frontend-pages/Contact.jsx')));
-const Portfolio = Loadable(lazy(() => import('../views/pages/frontend-pages/Portfolio.jsx')));
-const PagePricing = Loadable(lazy(() => import('../views/pages/frontend-pages/Pricing.jsx')));
-const BlogPage = Loadable(lazy(() => import('../views/pages/frontend-pages/Blog.jsx')));
-const BlogPost = Loadable(lazy(() => import('../views/pages/frontend-pages/BlogPost.jsx')));
-const BlogsCreate = Loadable(lazy(() => import('../views/apps/blogs/BlogsCreate.jsx')));
-const BlogsList = Loadable(lazy(() => import('../views/apps/blogs/BlogsList.jsx')));
-const BlogsDeleted = Loadable(lazy(() => import('../views/apps/blogs/BlogsDeleted.jsx')));
-
-// New frontend pages
-const BecomeSeller = Loadable(lazy(() => import('../views/pages/frontend-pages/BecomeSeller.jsx')));
-const UpcomingOffers = Loadable(
-  lazy(() => import('../views/pages/frontend-pages/UpcomingOffers.jsx')),
-);
-
-// Policy pages
-const PrivacyPolicy = Loadable(
-  lazy(() => import('../views/pages/frontend-pages/PrivacyPolicy.jsx')),
-);
-const ReturnPolicy = Loadable(lazy(() => import('../views/pages/frontend-pages/ReturnPolicy.jsx')));
-const RefundPolicy = Loadable(lazy(() => import('../views/pages/frontend-pages/RefundPolicy.jsx')));
-
-// Orders pages
-const PendingOrders = Loadable(lazy(() => import('../views/main-store/orders/PendingOrders.jsx')));
-const ReceivedOrders = Loadable(
-  lazy(() => import('../views/main-store/orders/ReceivedOrders.jsx')),
-);
-const ListOrders = Loadable(lazy(() => import('../views/main-store/orders/ListOrders.jsx')));
-
-// Products pages
-const AddProduct = Loadable(lazy(() => import('../views/main-store/products/AddProduct.jsx')));
-const ListProducts = Loadable(lazy(() => import('../views/main-store/products/ListProducts.jsx')));
-const DeletedProducts = Loadable(
-  lazy(() => import('../views/main-store/products/DeletedProducts.jsx')),
-);
-const EditProduct = Loadable(lazy(() => import('../views/main-store/products/EditProduct.jsx')));
-
-// Shop page
-const Shop = Loadable(lazy(() => import('../views/main-store/products/Shop.jsx')));
-
-const AddCategory = Loadable(lazy(() => import('../views/main-store/categories/AddCategory.jsx')));
-const ListCategories = Loadable(
-  lazy(() => import('../views/main-store/categories/ListCategories.jsx')),
-);
-const EditCategory = Loadable(
-  lazy(() => import('../views/main-store/categories/EditCategory.jsx')),
-);
-
 //mui charts
 const BarCharts = Loadable(lazy(() => import('../views/muicharts/barcharts/page.jsx')));
 const GaugeCharts = Loadable(lazy(() => import('../views/muicharts/gaugecharts/page.jsx')));
@@ -233,6 +335,119 @@ const Router = [
       { path: '/', element: <ModernDash /> },
       { path: '/dashboard', element: <ModernDash /> },
       { path: '/dashboard/ecommerce', element: <EcommerceDash /> },
+
+      // Frontend pages routes
+      { path: '/frontend-pages/homepage', element: <Homepage /> },
+      { path: '/frontend-pages/about', element: <About /> },
+      { path: '/frontend-pages/contact', element: <Contact /> },
+      { path: '/frontend-pages/portfolio', element: <Portfolio /> },
+      { path: '/frontend-pages/pricing', element: <PagePricing /> },
+      { path: '/frontend-pages/become-seller', element: <BecomeSeller /> },
+      { path: '/frontend-pages/upcoming-offers', element: <UpcomingOffers /> },
+      // Blogs routes
+      { path: '/frontend-pages/blogs/create', element: <BlogsCreate /> },
+      { path: '/frontend-pages/blogs/list', element: <BlogsList /> },
+      { path: '/frontend-pages/blogs/deleted', element: <BlogsDeleted /> },
+      // Policies routes
+      { path: '/frontend-pages/privacy-policy', element: <PrivacyPolicy /> },
+      { path: '/frontend-pages/return-policy', element: <ReturnPolicy /> },
+      { path: '/frontend-pages/refund-policy', element: <RefundPolicy /> },
+
+      // Orders routes
+      { path: '/main-store/orders/list', element: <ListOrders /> },
+      { path: '/main-store/orders/pending', element: <PendingOrders /> },
+      { path: '/main-store/orders/received', element: <ReceivedOrders /> },
+
+      // Products routes
+      { path: '/main-store/products/create', element: <AddProduct /> },
+      { path: '/main-store/products/list', element: <ListProducts /> },
+      { path: '/main-store/products/deleted', element: <DeletedProducts /> },
+      { path: '/main-store/products/edit/:id', element: <EditProduct /> },
+      { path: '/main-store/products/shop', element: <Shop /> },
+
+      // Categories routes
+      { path: '/main-store/categories/create', element: <AddCategory /> },
+      { path: '/main-store/categories/list', element: <ListCategories /> },
+      { path: '/main-store/categories/edit/:id', element: <EditCategory /> },
+
+      // Tags routes
+      { path: '/main-store/tags/create', element: <AddTag /> },
+      { path: '/main-store/tags/list', element: <ListTags /> },
+      { path: '/main-store/tags/edit/:id', element: <EditTag /> },
+
+      // Warehouse routes
+      { path: '/main-store/warehouse/purchases/list', element: <ListPurchases /> },
+      { path: '/main-store/warehouse/purchases/create', element: <AddPurchase /> },
+      { path: '/main-store/warehouse/inventory/list', element: <ListInventory /> },
+      { path: '/main-store/warehouse/inventory/create', element: <AddInventory /> },
+
+      // Attributes routes
+      { path: '/main-store/attributes/create', element: <AddAttribute /> },
+      { path: '/main-store/attributes/list', element: <ListAttributes /> },
+      { path: '/main-store/attributes/edit/:id', element: <EditAttribute /> },
+
+      // Invoices routes
+      { path: '/main-store/invoices/create', element: <AddInvoice /> },
+      { path: '/main-store/invoices/list', element: <ListInvoices /> },
+      { path: '/main-store/invoices/edit/:id', element: <EditInvoice /> },
+      { path: '/main-store/invoices/deleted', element: <DeletedInvoices /> },
+
+      // Brands routes
+      { path: '/main-store/brands', element: <ListBrands /> },
+      { path: '/main-store/brands/create', element: <AddBrand /> },
+      { path: '/main-store/brands/list', element: <ListBrands /> },
+      { path: '/main-store/brands/edit/:id', element: <EditBrand /> },
+
+      // Coupons routes
+      { path: '/main-store/coupons', element: <ListCoupons /> },
+      { path: '/main-store/coupons/create', element: <AddCoupon /> },
+      { path: '/main-store/coupons/list', element: <ListCoupons /> },
+      { path: '/main-store/coupons/edit/:id', element: <EditCoupon /> },
+
+      // Reviews route
+      { path: '/main-store/reviews', element: <Reviews /> },
+
+      // Settings route
+      { path: '/main-store/settings', element: <Settings /> },
+
+      // User Management routes
+      { path: '/user-manage', element: <ListUsers /> },
+      { path: '/user-manage/users/create', element: <CreateNewUser /> },
+      { path: '/user-manage/users/list', element: <ListUsers /> },
+      { path: '/user-manage/users/edit/:id', element: <EditUser /> },
+      { path: '/user-manage/users/deleted', element: <DeletedUsers /> },
+      { path: '/user-manage/users/account-settings', element: <AdminAccountSetting /> },
+
+      { path: '/user-manage/roles', element: <ListRoles /> },
+      { path: '/user-manage/roles/create', element: <AddNewRole /> },
+      { path: '/user-manage/roles/edit/:id', element: <EditRole /> },
+      { path: '/user-manage/roles/list', element: <ListRoles /> },
+
+      // Permissions routes
+      { path: '/user-manage/permissions', element: <ListPermissions /> },
+      { path: '/user-manage/permissions/create', element: <AddNewPermission /> },
+      { path: '/user-manage/permissions/edit/:id', element: <EditPermission /> },
+      { path: '/user-manage/permissions/list', element: <ListPermissions /> },
+
+      // Customers routes
+      { path: '/user-manage/customers', element: <ListCustomers /> },
+      { path: '/user-manage/customers/create', element: <AddNewCustomer /> },
+      { path: '/user-manage/customers/edit/:id', element: <EditCustomer /> },
+      { path: '/user-manage/customers/list', element: <ListCustomers /> },
+
+      // Staff routes
+      { path: '/user-manage/staff', element: <ListStaff /> },
+      { path: '/user-manage/staff/create', element: <AddNewStaff /> },
+      { path: '/user-manage/staff/edit/:id', element: <EditStaff /> },
+      { path: '/user-manage/staff/list', element: <ListStaff /> },
+
+      // Sellers routes
+      { path: '/user-manage/sellers', element: <ListSellers /> },
+      { path: '/user-manage/sellers/create', element: <AddNewSeller /> },
+      { path: '/user-manage/sellers/edit/:id', element: <EditSeller /> },
+      { path: '/user-manage/sellers/list', element: <ListSellers /> },
+
+      // Support routes
       { path: '/apps/chat', element: <Chats /> },
       { path: '/apps/notes', element: <Notes /> },
       { path: '/apps/calendar', element: <Calendar /> },
@@ -249,15 +464,12 @@ const Router = [
       { path: '/apps/user-profile/followers', element: <Followers /> },
       { path: '/apps/user-profile/friends', element: <Friends /> },
       { path: '/apps/user-profile/gallery', element: <Gallery /> },
-      { path: '/main-store/invoices', element: <Invoices /> },
-      { path: '/main-store/invoices/create', element: <InvoiceCreate /> },
-      { path: '/main-store/invoices/detail/:id', element: <InvoiceDetail /> },
-      { path: '/main-store/invoices/edit/:id', element: <InvoiceEdit /> },
       { path: '/apps/kanban', element: <Kanban /> },
       { path: '/pages/rollbase-casl', element: <RollbaseCASL /> },
       { path: '/pages/pricing', element: <Pricing /> },
       { path: '/pages/account-setting', element: <AccountSetting /> },
       { path: '/pages/faq', element: <Faq /> },
+
       { path: '/widgets/cards', element: <WidgetCards /> },
       { path: '/widgets/banners', element: <WidgetBanners /> },
       { path: '/widgets/charts', element: <WidgetCharts /> },
@@ -312,17 +524,6 @@ const Router = [
       { path: '/ui-components/tooltip', element: <MuiTooltip /> },
       { path: '/ui-components/transfer-list', element: <MuiTransferList /> },
       { path: '/ui-components/typography', element: <MuiTypography /> },
-      { path: '/main-store/products/create', element: <AddProduct /> },
-      { path: '/main-store/products/list', element: <ListProducts /> },
-      { path: '/main-store/products/deleted', element: <DeletedProducts /> },
-      { path: '/main-store/products/edit/:id', element: <EditProduct /> },
-      { path: '/main-store/products/shop', element: <Shop /> },
-      { path: '/main-store/orders/list', element: <ListOrders /> },
-      { path: '/main-store/orders/pending', element: <PendingOrders /> },
-      { path: '/main-store/orders/received', element: <ReceivedOrders /> },
-      { path: '/main-store/categories/create', element: <AddCategory /> },
-      { path: '/main-store/categories/list', element: <ListCategories /> },
-      { path: '/main-store/categories/edit/:id', element: <EditCategory /> },
     ],
   },
   {
@@ -339,21 +540,6 @@ const Router = [
       { path: '/auth/two-steps2', element: <TwoSteps2 /> },
       { path: '/auth/maintenance', element: <Maintenance /> },
       { path: '/landingpage', element: <Landingpage /> },
-      { path: '/frontend-pages/homepage', element: <Homepage /> },
-      { path: '/frontend-pages/about', element: <About /> },
-      { path: '/frontend-pages/contact', element: <Contact /> },
-      { path: '/frontend-pages/portfolio', element: <Portfolio /> },
-      { path: '/frontend-pages/pricing', element: <PagePricing /> },
-      { path: '/frontend-pages/blog', element: <BlogPage /> },
-      { path: '/frontend-pages/blog-post', element: <BlogPost /> },
-      { path: '/apps/blogs/create', element: <BlogsCreate /> },
-      { path: '/apps/blogs/list', element: <BlogsList /> },
-      { path: '/apps/blogs/deleted', element: <BlogsDeleted /> },
-      { path: '/frontend-pages/become-seller', element: <BecomeSeller /> },
-      { path: '/frontend-pages/upcoming-offers', element: <UpcomingOffers /> },
-      { path: '/frontend-pages/privacy-policy', element: <PrivacyPolicy /> },
-      { path: '/frontend-pages/return-policy', element: <ReturnPolicy /> },
-      { path: '/frontend-pages/refund-policy', element: <RefundPolicy /> },
       { path: '/mui-charts/bar-charts', element: <BarCharts /> },
       { path: '/mui-charts/gauge-charts', element: <GaugeCharts /> },
       { path: '/mui-charts/area-charts', element: <AreaCharts /> },

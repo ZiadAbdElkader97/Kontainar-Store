@@ -7,8 +7,13 @@ import { Bloghandlers } from 'src/api/blog/blogData';
 import { NotesHandlers } from 'src/api/notes/NotesData';
 import { TicketHandlers } from 'src/api/ticket/TicketData';
 import { Emailhandlers } from 'src/api/email/EmailData';
-import { InvoiceHandlers } from 'src/api/invoice/invoceLists';
 import { Kanbanhandlers } from 'src/api/kanban/KanbanData';
+import { InvoiceHandlers } from 'src/api/invoices/InvoicesData';
+import { BrandHandlers } from 'src/api/brands/BrandsData';
+import { CouponHandlers } from 'src/api/coupons/CouponsData';
+import { ReviewHandlers } from 'src/api/reviews/ReviewsData';
+import { SettingsHandlers } from 'src/api/settings/SettingsData';
+import { AllUsersHandlers } from 'src/api/user-management/AllUsersData';
 
 export const mockHandlers = [
   ...Contacthandlers,
@@ -20,8 +25,11 @@ export const mockHandlers = [
   ...NotesHandlers,
   ...TicketHandlers,
   ...Emailhandlers,
-  ...InvoiceHandlers,
   ...Kanbanhandlers,
+  ...InvoiceHandlers,
+  ...BrandHandlers,
+  ...CouponHandlers,
+  ...ReviewHandlers,
+  ...SettingsHandlers,
+  ...AllUsersHandlers,
 ];
-
-

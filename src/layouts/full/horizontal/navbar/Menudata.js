@@ -19,6 +19,17 @@ import {
   IconPackage,
   IconShoppingCart,
   IconFileInvoice,
+  IconTags,
+  IconBuildingWarehouse,
+  IconAdjustmentsHorizontal,
+  IconTrademark,
+  IconDiscount2,
+  IconStars,
+  IconUsers,
+  IconCrown,
+  IconKey,
+  IconAddressBook,
+  IconIdBadge2,
 } from '@tabler/icons-react';
 import { uniqueId } from 'lodash';
 
@@ -65,15 +76,29 @@ const Menuitems = [
       },
       {
         id: uniqueId(),
-        title: 'Blog',
+        title: 'Blogs',
         icon: IconPoint,
-        href: '/frontend-pages/blog',
-      },
-      {
-        id: uniqueId(),
-        title: 'Blog Details',
-        icon: IconPoint,
-        href: '/frontend-pages/blog/Blog_1',
+        href: '/blogs/',
+        children: [
+          {
+            id: uniqueId(),
+            title: 'Add New Blog',
+            icon: IconPoint,
+            href: '/blogs/create',
+          },
+          {
+            id: uniqueId(),
+            title: 'List Blogs',
+            icon: IconPoint,
+            href: '/blogs/list',
+          },
+          {
+            id: uniqueId(),
+            title: 'Deleted Blogs',
+            icon: IconPoint,
+            href: '/blogs/deleted',
+          },
+        ],
       },
       {
         id: uniqueId(),
@@ -219,27 +244,307 @@ const Menuitems = [
       },
       {
         id: uniqueId(),
+        title: 'Tags',
+        icon: IconTags,
+        href: '/main-store/tags',
+        children: [
+          {
+            id: uniqueId(),
+            title: 'Add New Tag',
+            icon: IconPoint,
+            href: '/main-store/tags/create',
+          },
+          {
+            id: uniqueId(),
+            title: 'List Tags',
+            icon: IconPoint,
+            href: '/main-store/tags/list',
+          },
+        ],
+      },
+      {
+        id: uniqueId(),
+        title: 'Warehouse',
+        icon: IconBuildingWarehouse,
+        href: '/main-store/warehouse',
+        children: [
+          {
+            id: uniqueId(),
+            title: 'Purchases',
+            icon: IconPoint,
+            href: '/main-store/warehouse/purchases',
+            children: [
+              {
+                id: uniqueId(),
+                title: 'Add New Purchase',
+                icon: IconPoint,
+                href: '/main-store/warehouse/purchases/create',
+              },
+              {
+                id: uniqueId(),
+                title: 'List Purchases',
+                icon: IconPoint,
+                href: '/main-store/warehouse/purchases/list',
+              },
+            ],
+          },
+          {
+            id: uniqueId(),
+            title: 'Inventory',
+            icon: IconPoint,
+            href: '/main-store/warehouse/inventory',
+            children: [
+              {
+                id: uniqueId(),
+                title: 'Add New Inventory',
+                icon: IconPoint,
+                href: '/main-store/warehouse/inventory/create',
+              },
+              {
+                id: uniqueId(),
+                title: 'List Inventory',
+                icon: IconPoint,
+                href: '/main-store/warehouse/inventory/list',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: uniqueId(),
+        title: 'Attributes',
+        icon: IconAdjustmentsHorizontal,
+        href: '/main-store/attributes',
+        children: [
+          {
+            id: uniqueId(),
+            title: 'Add New Attribute',
+            icon: IconPoint,
+            href: '/main-store/attributes/create',
+          },
+          {
+            id: uniqueId(),
+            title: 'List Attributes',
+            icon: IconPoint,
+            href: '/main-store/attributes/list',
+          },
+        ],
+      },
+      {
+        id: uniqueId(),
         title: 'Invoices',
         icon: IconFileInvoice,
         href: '/main-store/invoices',
         children: [
           {
             id: uniqueId(),
-            title: 'Create Invoice',
+            title: 'Add New Invoice',
             icon: IconPoint,
-            href: '/invoices/create',
+            href: '/main-store/invoices/create',
           },
           {
             id: uniqueId(),
             title: 'List Invoices',
             icon: IconPoint,
-            href: '/invoices/list',
+            href: '/main-store/invoices/list',
           },
           {
             id: uniqueId(),
             title: 'Deleted Invoices',
             icon: IconPoint,
-            href: '/invoices/deleted',
+            href: '/main-store/invoices/deleted',
+          },
+        ],
+      },
+      {
+        id: uniqueId(),
+        title: 'Brands',
+        icon: IconTrademark,
+        href: '/main-store/brands',
+        children: [
+          {
+            id: uniqueId(),
+            title: 'Add New Brand',
+            icon: IconPoint,
+            href: '/main-store/brands/create',
+          },
+          {
+            id: uniqueId(),
+            title: 'List Brands',
+            icon: IconPoint,
+            href: '/main-store/brands/list',
+          },
+        ],
+      },
+      {
+        id: uniqueId(),
+        title: 'Coupons',
+        icon: IconDiscount2,
+        href: '/main-store/coupons',
+        children: [
+          {
+            id: uniqueId(),
+            title: 'Add New Coupon',
+            icon: IconPoint,
+            href: '/main-store/coupons/create',
+          },
+          {
+            id: uniqueId(),
+            title: 'List Coupons',
+            icon: IconPoint,
+            href: '/main-store/coupons/list',
+          },
+        ],
+      },
+      {
+        id: uniqueId(),
+        title: 'Reviews',
+        icon: IconStars,
+        href: '/main-store/reviews',
+      },
+      {
+        id: uniqueId(),
+        title: 'Settings',
+        icon: IconSettings,
+        href: '/main-store/settings',
+      },
+    ],
+  },
+  {
+    id: uniqueId(),
+    title: 'User Management',
+    icon: IconUsers,
+    href: '/user-management',
+    children: [
+      {
+        id: uniqueId(),
+        title: 'All Users',
+        icon: IconUsers,
+        href: '/user-manage/all-users',
+        children: [
+          {
+            id: uniqueId(),
+            title: 'Create New User',
+            icon: IconPoint,
+            href: '/user-manage/users/create',
+          },
+          {
+            id: uniqueId(),
+            title: 'List Users',
+            icon: IconPoint,
+            href: '/user-manage/users/list',
+          },
+          {
+            id: uniqueId(),
+            title: 'Deleted Users',
+            icon: IconPoint,
+            href: '/user-manage/users/deleted',
+          },
+          {
+            id: uniqueId(),
+            title: 'Admin Account Setting',
+            icon: IconPoint,
+            href: '/user-manage/users/account-settings',
+          },
+        ],
+      },
+      {
+        id: uniqueId(),
+        title: 'Roles',
+        icon: IconCrown,
+        href: '/user-manage/roles',
+        children: [
+          {
+            id: uniqueId(),
+            title: 'Add New Role',
+            icon: IconPoint,
+            href: '/user-manage/roles/create',
+          },
+          {
+            id: uniqueId(),
+            title: 'List Roles',
+            icon: IconPoint,
+            href: '/user-manage/roles/list',
+          },
+        ],
+      },
+      {
+        id: uniqueId(),
+        title: 'Permissions',
+        icon: IconKey,
+        href: '/user-manage/permissions',
+        children: [
+          {
+            id: uniqueId(),
+            title: 'Add New Permission',
+            icon: IconPoint,
+            href: '/user-manage/permissions/create',
+          },
+          {
+            id: uniqueId(),
+            title: 'List Permissions',
+            icon: IconPoint,
+            href: '/user-manage/permissions/list',
+          },
+        ],
+      },
+      {
+        id: uniqueId(),
+        title: 'Customers',
+        icon: IconAddressBook,
+        href: '/user-manage/customers',
+        children: [
+          {
+            id: uniqueId(),
+            title: 'Add New Customer',
+            icon: IconPoint,
+            href: '/user-manage/customers/create',
+          },
+          {
+            id: uniqueId(),
+            title: 'List Customers',
+            icon: IconPoint,
+            href: '/user-manage/customers/list',
+          },
+        ],
+      },
+      {
+        id: uniqueId(),
+        title: 'Staff',
+        icon: IconIdBadge2,
+        href: '/user-manage/staff',
+        children: [
+          {
+            id: uniqueId(),
+            title: 'Add New Staff',
+            icon: IconPoint,
+            href: '/user-manage/staff/create',
+          },
+          {
+            id: uniqueId(),
+            title: 'List Staff',
+            icon: IconPoint,
+            href: '/user-manage/staff/list',
+          },
+        ],
+      },
+      {
+        id: uniqueId(),
+        title: 'Sellers',
+        icon: IconBuildingStore,
+        href: '/user-manage/sellers',
+        children: [
+          {
+            id: uniqueId(),
+            title: 'Add New Seller',
+            icon: IconPoint,
+            href: '/user-manage/sellers/create',
+          },
+          {
+            id: uniqueId(),
+            title: 'List Sellers',
+            icon: IconPoint,
+            href: '/user-manage/sellers/list',
           },
         ],
       },

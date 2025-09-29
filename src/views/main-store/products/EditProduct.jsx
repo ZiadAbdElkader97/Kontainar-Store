@@ -33,7 +33,7 @@ import {
   Delete as DeleteImageIcon,
 } from '@mui/icons-material';
 import PageContainer from 'src/components/container/PageContainer';
-import { getProductById, updateProduct, deleteProduct } from '../../../services/productsService';
+import { getProductById, updateProduct, deleteProduct } from '../../../api/products/productsService';
 
 const EditProduct = () => {
   const { id } = useParams();

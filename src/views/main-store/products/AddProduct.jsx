@@ -30,7 +30,7 @@ import {
   ArrowBack as ArrowBackIcon,
 } from '@mui/icons-material';
 import PageContainer from 'src/components/container/PageContainer';
-import { addNewProduct } from '../../../services/productsService';
+import { addNewProduct } from '../../../api/products/productsService';
 import s1 from 'src/assets/images/products/s1.jpg';
 
 const AddProduct = () => {

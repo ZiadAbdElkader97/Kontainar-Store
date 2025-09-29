@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import {
   Fab,
   Drawer,
@@ -51,6 +51,33 @@ const Customizer = () => {
     setActiveTheme
   } = useContext(CustomizerContext);
 
+  // Fix aria-hidden issue on root element
+  useEffect(() => {
+    const root = document.getElementById('root');
+    if (root && root.getAttribute('aria-hidden') === 'true') {
+      root.removeAttribute('aria-hidden');
+    }
+    
+    // Observer to continuously remove aria-hidden if it gets added
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'aria-hidden') {
+          const target = mutation.target;
+          if (target.id === 'root' && target.getAttribute('aria-hidden') === 'true') {
+            target.removeAttribute('aria-hidden');
+          }
+        }
+      });
+    });
+    
+    if (root) {
+      observer.observe(root, { attributes: true, attributeFilter: ['aria-hidden'] });
+    }
+    
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   const StyledBox = styled(Box)(({ theme }) => ({
     boxShadow: theme.shadows[8],
@@ -106,16 +133,25 @@ const Customizer = () => {
 
 
   return (
-    (<div>
+    (<div aria-hidden={false}>
       {/* ------------------------------------------- */}
       {/* --Floating Button to open customizer ------ */}
       {/* ------------------------------------------- */}
-      <Tooltip title="Settings">
+      <Tooltip title="Settings" aria-hidden={false}>
         <Fab
           color="primary"
           aria-label="settings"
-          sx={{ position: "fixed", right: "25px", bottom: "15px" }}
+          sx={{ 
+            position: "fixed", 
+            right: "25px", 
+            bottom: "15px",
+            '&[aria-hidden="true"]': {
+              ariaHidden: 'false !important'
+            }
+          }}
           onClick={() => setShowDrawer(true)}
+          tabIndex={-1}
+          aria-hidden={false}
         >
           <IconSettings stroke={1.5} />
         </Fab>
@@ -127,6 +163,7 @@ const Customizer = () => {
         disableEnforceFocus
         disableAutoFocus
         disableRestoreFocus
+        aria-hidden={false}
         slotProps={{
           paper: {
             sx: {
