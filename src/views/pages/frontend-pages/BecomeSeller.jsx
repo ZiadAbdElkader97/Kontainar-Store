@@ -12,14 +12,14 @@ import {
   Grid,
 } from '@mui/material';
 import PageContainer from 'src/components/container/PageContainer';
-import HeaderAlert from '../../../components/frontend-pages/shared/header/HeaderAlert';
-import HpHeader from '../../../components/frontend-pages/shared/header/HpHeader';
-import Footer from '../../../components/frontend-pages/shared/footer';
-import ScrollToTop from '../../../components/frontend-pages/shared/scroll-to-top';
-import Banner from '../../../components/frontend-pages/become-seller/banner';
-import Benefits from '../../../components/frontend-pages/become-seller/benefits';
-import Requirements from '../../../components/frontend-pages/become-seller/requirements';
-import Steps from '../../../components/frontend-pages/become-seller/steps';
+import HeaderAlert from '../../../../components/frontend-pages/shared/header/HeaderAlert';
+import HpHeader from '../../../../components/frontend-pages/shared/header/HpHeader';
+import Footer from '../../../../components/frontend-pages/shared/footer';
+import ScrollToTop from '../../../../components/frontend-pages/shared/scroll-to-top';
+import Banner from '../../../../components/frontend-pages/become-seller/banner';
+import Benefits from '../../../../components/frontend-pages/become-seller/benefits';
+import Requirements from '../../../../components/frontend-pages/become-seller/requirements';
+import Steps from '../../../../components/frontend-pages/become-seller/steps';
 
 export default function BecomeSeller() {
   const [formData, setFormData] = useState({

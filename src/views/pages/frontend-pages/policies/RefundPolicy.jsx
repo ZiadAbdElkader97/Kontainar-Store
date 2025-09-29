@@ -15,10 +15,10 @@ import {
   StepContent,
 } from '@mui/material';
 import PageContainer from 'src/components/container/PageContainer';
-import HeaderAlert from '../../../components/frontend-pages/shared/header/HeaderAlert';
-import HpHeader from '../../../components/frontend-pages/shared/header/HpHeader.jsx';
-import Footer from '../../../components/frontend-pages/shared/footer';
-import ScrollToTop from '../../../components/frontend-pages/shared/scroll-to-top';
+import HeaderAlert from '../../../../components/frontend-pages/shared/header/HeaderAlert';
+import HpHeader from '../../../../components/frontend-pages/shared/header/HpHeader.jsx';
+import Footer from '../../../../components/frontend-pages/shared/footer';
+import ScrollToTop from '../../../../components/frontend-pages/shared/scroll-to-top';
 
 export default function RefundPolicy() {
   return (
